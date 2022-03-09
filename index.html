@@ -15,14 +15,19 @@
           $(this).toggleClass("inactive");
 
           $("#writing").toggleClass("writingon");
-          $(".canvas-wrapper").toggleClass("none");
+          $("#can").toggleClass("none");
 
           $(".po").toggleClass("leafone");
           $(".pt").toggleClass("leaftwo");
 
           $(".average").toggleClass("none");
           $(".clown").toggleClass("none");
+          $(".lines").toggleClass("none");
 
+
+
+          $(".norm").toggleClass("none");
+          $(".killme").toggleClass("none");
 
         });
 
@@ -49,6 +54,8 @@
         // $('#fill').text("you have no in your shopping basket.");
 
       setInterval(anima, 6000);
+      setInterval(animatwo, 6000);
+
 
       function anima() {
         setTimeout(function(){
@@ -73,6 +80,33 @@
         }, 6000);
       }
 
+      function animatwo() {
+        setTimeout(function(){
+          $(".a").addClass("none");
+        }, 1500);
+        setTimeout(function(){
+          $(".b").removeClass("none");
+        }, 1500);
+        setTimeout(function(){
+            $(".b").addClass("none");
+        }, 3000);
+        setTimeout(function(){
+            $(".c").removeClass("none");
+        }, 3000);
+        setTimeout(function(){
+            $(".c").addClass("none");
+        }, 4500);
+        setTimeout(function(){
+            $(".d").removeClass("none");
+        }, 4500);
+        setTimeout(function(){
+            $(".d").addClass("none");
+        }, 6000);
+        setTimeout(function(){
+            $(".a").removeClass("none");
+        }, 6000);
+      }
+
 
       });
     </script>
@@ -91,11 +125,16 @@
         display: none;
       }
       .header {
+        justify-content: flex-end;
         background: white;
         display: flex;
-        flex-direction: column;
         align-items: flex-end;
         padding-right: 100px;
+      }
+      .dyslexia {
+        background: url("dyslexia.svg");
+        width: 362px;
+        height: 74px;
       }
       .header h1 {
         font-size: 72px;
@@ -115,8 +154,16 @@
       }
       .test {
         position: sticky;
-        top: 3%;
+        top: 105px;
         z-index: 100;
+      }
+      .white {
+        color: white;
+      }
+      .fixx {
+        position: fixed;
+        top: 0;
+        right: 140px;
       }
       .buttons {
         position: relative;
@@ -252,6 +299,7 @@
         position: relative;
       }
       #can {
+        z-index: 100;
         /* border: 2px solid; */
       }
       .text-wrapper {
@@ -289,12 +337,64 @@
       .average p {
         color: black !important;
       }
-
+      #attention p {
+        margin-bottom: 3px;
+        margin-top: 0;
+      }
+      .lines {
+        position: absolute;
+        top: 0;
+        overflow: auto;
+        width: 100%;
+        height: 477px;
+        /* background: blue; */
+        z-index: 0;
+        margin-top: 63px;
+      }
+      .bold {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: black;
+      }
+      #one {
+        top: 33px;
+      }
+      #two {
+        top: 74px;
+      }
+      #three {
+        top: 115px;
+      }
+      #four {
+        top: 156px;
+      }
+      #five {
+        top: 197px;
+      }
+      #six {
+        top: 238px;
+      }
+      #seven {
+        top: 343px;
+      }
+      #eight {
+        top: 383px;
+      }
+      #nine {
+        top: 424px;
+      }
+      #ten {
+        top: 466px;
+      }
     </style>
   </head>
   <body onload="init()">
     <div class="header">
-      <h1>what is dyslexia?</h1>
+      <h1>what is&nbsp;</h1>
+      <h1 class="white"> dyslexia</h1>
+      <h1 class="fixx"> dyslexia</h1>
+      <h1>?</h1>
     </div>
     <div class="test">
       <div class="buttons off">
@@ -317,30 +417,42 @@ One of the biggest issues when it comes to dyslexia is trouble recognising phone
 Therefore, recognising short, familiar words or sounding out longer words can become difficult. It can take a lot of time for a person with dyslexia to pronounce a word. Since reading takes more time and focus, the meaning of the word is often lost, which results in poor reading comprehension.</p>
     </div>
 
-    <div class="info writingon" id="writing">
+    <div class="info" id="writing">
       <h3>writing</h3>
       <div class="wrapper">
+        <div class="lines none">
+          <div class="bold" id="one"></div>
+          <div class="bold" id="two"></div>
+          <div class="bold" id="three"></div>
+          <div class="bold" id="four"></div>
+          <div class="bold" id="five"></div>
+          <div class="bold" id="six"></div>
+          <div class="bold" id="seven"></div>
+          <div class="bold" id="eight"></div>
+          <div class="bold" id="nine"></div>
+          <div class="bold" id="ten"></div>
+        </div>
         <div class="text-wrapper">
           <p><span>Problems with wr</span>iting have a different name — dysgraphia. Many experts see dysgraphia as a transcription problem. This is an important skill set that includes typing and spelling that allows us to write. People that have dysgraphia typically write slower than others. They may also have trouble with spelling because writing letters becomes more difficult.</p>
           <p>Intelligence is not a factor when it comes to dysgraphia. Most of the challenges are caused by motor skills issues, which can be improved with the right exercises. People with dysgraphia may also be eligible to use special accommodations at work or school.</p>
         </div>
         <div class="canvas-wrapper" id="outer">
-          <canvas id="can"></canvas>
+          <canvas class="none" id="can"></canvas>
         </div>
       </div>
     </div>
     <div class="info" id="coordination">
       <h3>coordination</h3>
-      <p class="po leafone">Dyspraxia is a type of developmental delay seen in children and adults who have coordination problems. While this disorder typically affects movement and coordination, it is not a physical issue. Issues with dyspraxia can change as time goes on depending on the individual.</p>
-      <p class="pt leaftwo">Duis congue ex mauris. Morbi faucibus a nisi vitae sollicitudin. Etiam a pulvinar augue. Praesent dictum nunc commodo, sodales lorem quis, scelerisque purus. Sed venenatis non arcu sit amet faucibus. Phasellus cursus risus vitae metus facilisis porttitor et at augue. Donec condimentum pretium odio vel viverra. Aenean pulvinar massa arcu, at pulvinar quam gravida sed.</p>
+      <p class="po">Dyspraxia is a type of developmental delay seen in children and adults who have coordination problems. While this disorder typically affects movement and coordination, it is not a physical issue. Issues with dyspraxia can change as time goes on depending on the individual.</p>
+      <p class="pt">Duis congue ex mauris. Morbi faucibus a nisi vitae sollicitudin. Etiam a pulvinar augue. Praesent dictum nunc commodo, sodales lorem quis, scelerisque purus. Sed venenatis non arcu sit amet faucibus. Phasellus cursus risus vitae metus facilisis porttitor et at augue. Donec condimentum pretium odio vel viverra. Aenean pulvinar massa arcu, at pulvinar quam gravida sed.</p>
     </div>
     <div class="info" id="memory">
       <h3>memory</h3>
-      <div class="average none">
+      <div class="average">
         <p>Donec ullamcorper, velit eget consectetur consectetur, lacus dui ultricies velit, ut feugiat risus nunc dictum odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, tortor et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec lorem quam
         </p>
       </div>
-      <div class="clown">
+      <div class="clown none">
         <p id="f"><span class="first">Donec</span> ullamcorper, velit eget consectetur consectetur, lacus dui <span class="first">ultricies</span> velit, ut feugiat risus nunc dictum odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, <span class="first">tortor</span> et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec lorem quam
         </p>
         <p id="s" class="none">Donec ullamcorper, velit eget consectetur <span class="second">consectetur</span>, lacus dui ultricies velit, ut feugiat risus <span class="second">nunc dictum</span> odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, tortor et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec <span class="second">lorem quam</span>
@@ -351,7 +463,24 @@ Therefore, recognising short, familiar words or sounding out longer words can be
     </div>
     <div class="info" id="attention">
       <h3>attention</h3>
-      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+      <div class="norm">
+        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+      </div>
+
+      <div class="killme none">
+        <div class="a">
+          <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+        </div>
+        <div class="b none">
+          <p>himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+        </div>
+        <div class="c none">
+          <p>himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+        </div>
+        <div class="d none">
+          <p>himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+        </div>
+      </div>
     </div>
 
 
