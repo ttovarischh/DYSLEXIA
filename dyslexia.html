@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DYSLEXIA</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        $( ".toggle" ).click(function() {
+          $( ".buttons" ).toggleClass("off");
+          $( ".buttons" ).toggleClass("on");
+
+          $(this).toggleClass("active");
+          $(this).toggleClass("inactive");
+
+          $("#writing").toggleClass("writingon");
+          $(".canvas-wrapper").toggleClass("none");
+
+          $(".po").toggleClass("leafone");
+          $(".pt").toggleClass("leaftwo");
+
+          $(".average").toggleClass("none");
+          $(".clown").toggleClass("none");
+
+
+        });
+
+
+        $(document).mousemove(function (event) {
+        let leaff = $(".leafone, .leaftwo");
+        let x = (leaff.offset().left) + (leaff.width() / 2);
+        let y = (leaff.offset().top) + (leaff.height() / 2);
+        let rad = Math.atan2(event.pageX - x, event.pageY - y);
+        let rot = (rad * (45 / Math.PI) * -1) + 30;
+
+        if ($('#coordination').is(":hover")) {
+        leaff.css({
+          '-webkit-transform': 'rotate(' + rot + 'deg)',
+          '-moz-transform': 'rotate(' + rot + 'deg)',
+          '-ms-transform': 'rotate(' + rot + 'deg)',
+          'transform': 'rotate(' + rot + 'deg)'
+        });
+        } else {
+        $(".leafone, .leaftwo").css({'transform' : 'rotate('+ 0 +'deg)'});
+        }
+        });
+
+        // $('#fill').text("you have no in your shopping basket.");
+
+      setInterval(anima, 6000);
+
+      function anima() {
+        setTimeout(function(){
+          $("#f").addClass("none");
+        }, 0);
+        setTimeout(function(){
+          $("#s").removeClass("none");
+        }, 0);
+        setTimeout(function(){
+            $("#s").addClass("none");
+        }, 2000);
+        setTimeout(function(){
+            $("#t").removeClass("none");
+        }, 2000);
+        setTimeout(function(){
+            $("#t").addClass("none");
+        }, 4000);
+        setTimeout(function(){
+            $("#f").removeClass("none");
+        }, 4000);
+        setTimeout(function(){
+        }, 6000);
+      }
+
+
+      });
+    </script>
+
+    <style media="screen">
+      body {
+        margin: 0;
+        padding-bottom: 150px;
+      }
+      * {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+      }
+      .none {
+        display: none;
+      }
+      .header {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 100px;
+      }
+      .header h1 {
+        font-size: 72px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+      .buttons h2:nth-of-type(2) {
+        text-transform: uppercase;
+        font-size: 36px;
+        margin-right: 7%;
+      }
+      .buttons h2:first-of-type {
+        text-transform: uppercase;
+        font-size: 36px;
+        margin-left: 2.5%;
+      }
+      .test {
+        position: sticky;
+        top: 3%;
+        z-index: 100;
+      }
+      .buttons {
+        position: relative;
+        width: 171px;
+        height: 64px;
+        border-radius: 1000px;
+        border: 1px solid #000000;
+        margin-left: auto;
+        margin-right: 127px;;
+        display: flex;
+        align-items: center;
+        padding-left: 6px;
+        justify-content: space-between;
+        transition: all 0.5s ease;
+      }
+      .off {
+        background: #E5E5E5;
+      }
+      .on {
+        background: black;
+        color: white;
+      }
+      .toggle {
+        cursor: pointer;
+      }
+      .inactive {
+        position: absolute;
+        background: white;
+        width: 70px;
+        height: calc(100% - 12px);
+        border-radius: 1000px;
+        border: 1px solid #000000;
+        left: 3%;
+        transition: all 0.5s ease;
+      }
+      .active {
+        position: absolute;
+        background: white;
+        width: 80px;
+        height: calc(100% - 12px);
+        border-radius: 1000px;
+        border: 1px solid #000000;
+        left: calc(100% - 80px - 3%);
+        transition: all 0.5s ease;
+      }
+      .info {
+        margin-left: 4.17vw;
+        margin-right: 8.40vw;
+        margin-top: 134px;
+      }
+      .info p {
+        font-size: 36px;
+        line-height: 41px;
+      }
+      .info h3 {
+        font-size: 36px;
+        line-height: 41px;
+        text-transform: uppercase;
+        margin-bottom: 44px;
+      }
+      .leafone {
+        transform-origin: 0 0;
+      }
+      .leaftwo {
+        transform-origin: 0 0;
+      }
+      #reading, #writing, #coordination, #memory, #attention {
+        margin-top: 160px;
+      }
+      #reading {
+        /* background: blue; */
+      }
+      #reading h3 {
+        color: #FF0000;
+      }
+      #writing h3 {
+        color: #0000FF;
+      }
+
+      .writingon p {
+        font-family: lcd;
+        font-size: 63px;
+      }
+      .writingon span {
+        font-family: lc;
+        font-size: 63px;
+        color: blue;
+      }
+
+      #coordination h3 {
+        color: #7100FF;
+      }
+      #memory h3 {
+        color: #00FF00;
+      }
+      #attention h3 {
+        color: #24FFFF;
+      }
+      .reading_animate {
+        animation: reading 4s ease infinite alternate;
+      }
+      @keyframes reading {
+        0% {
+          width: 100%;
+        }
+        100% {
+          width: 10%;
+        }
+      }
+      @font-face {
+        font-family: lc;
+        src: url('lc.ttf');
+      }
+      @font-face {
+        font-family: lcd;
+        src: url('lcd.ttf');
+      }
+      .text-wrapper {
+        overflow:auto;
+        /* height: 100%; */
+        position: relative;
+      }
+      .canvas-wrapper {
+        top: 0;
+        position: absolute;
+        height: 534px;
+        width: 100%;
+        /* background: blue; */
+      }
+      .wrapper {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+      }
+      #can {
+        /* border: 2px solid; */
+      }
+      .text-wrapper {
+        /* text-decoration: underline; */
+      }
+      #memory p {
+        color: white;
+      }
+      .first {
+        color: black;
+      }
+      .second {
+        color: black;
+      }
+      .third {
+        color: black;
+      }
+      @keyframes first {
+        0% {
+          opacity: 1;
+        }
+        99% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      #s {
+        /* display: none; */
+      }
+      #t {
+        /* display: none; */
+      }
+      .average p {
+        color: black !important;
+      }
+
+    </style>
+  </head>
+  <body onload="init()">
+    <div class="header">
+      <h1>what is dyslexia?</h1>
+    </div>
+    <div class="test">
+      <div class="buttons off">
+        <div class="toggle inactive"></div>
+        <h2>on</h2>
+        <h2>off</h2>
+      </div>
+    </div>
+
+    <div class="info" id="main">
+      <p>Dyslexia is a type of learning disability. People with dyslexia are not stupid or lazy. Most have with high or average intelligence, and they work very hard to overcome their learning problems.</p>
+      <p>Dyslexia is the result of the brain working in a different way. With the help of Magnetic Resonance Imaging (MRI), scientists were able to prove that there were certain types of abnormalities that cause neurobiological causes. So, in people with dyslexia, the posterior part of the left middle temporal gyrus is less active.</p>
+      <p>Heredity can also play a role in the development of dyslexia. If one of the parents is dyslexic, there is a 50% chance that their child may also be dyslexic. If both parents are dyslexic, those chances increase to 80%. Furthermore, dyslexia has no cure, its effects can only be lessened.</p>
+      <p>Dyslexia primarily affects the skills involved in accurate and fluent word reading and spelling, but that's not all. Dyslexia mainly affects information processing, which means that people who have dyslexia also have problems with coordination, memory and attention. This website is primarily for people who are not dyslexic to learn about it and have a space for discussion. We built this website to inform and educate people about dyslexia.</p>
+    </div>
+    <div class="info" id="reading">
+      <h3>reading</h3>
+      <p>Most people think that dyslexia causes people see words backwards. However, these types of things happen as a normal part of child development, and are seen in many children until first or second grade.
+One of the biggest issues when it comes to dyslexia is trouble recognising phonemes or the basic sounds of speech. It can become difficult for people with dyslexia to make connect letters with their associated sounds.
+Therefore, recognising short, familiar words or sounding out longer words can become difficult. It can take a lot of time for a person with dyslexia to pronounce a word. Since reading takes more time and focus, the meaning of the word is often lost, which results in poor reading comprehension.</p>
+    </div>
+
+    <div class="info writingon" id="writing">
+      <h3>writing</h3>
+      <div class="wrapper">
+        <div class="text-wrapper">
+          <p><span>Problems with wr</span>iting have a different name — dysgraphia. Many experts see dysgraphia as a transcription problem. This is an important skill set that includes typing and spelling that allows us to write. People that have dysgraphia typically write slower than others. They may also have trouble with spelling because writing letters becomes more difficult.</p>
+          <p>Intelligence is not a factor when it comes to dysgraphia. Most of the challenges are caused by motor skills issues, which can be improved with the right exercises. People with dysgraphia may also be eligible to use special accommodations at work or school.</p>
+        </div>
+        <div class="canvas-wrapper" id="outer">
+          <canvas id="can"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="info" id="coordination">
+      <h3>coordination</h3>
+      <p class="po leafone">Dyspraxia is a type of developmental delay seen in children and adults who have coordination problems. While this disorder typically affects movement and coordination, it is not a physical issue. Issues with dyspraxia can change as time goes on depending on the individual.</p>
+      <p class="pt leaftwo">Duis congue ex mauris. Morbi faucibus a nisi vitae sollicitudin. Etiam a pulvinar augue. Praesent dictum nunc commodo, sodales lorem quis, scelerisque purus. Sed venenatis non arcu sit amet faucibus. Phasellus cursus risus vitae metus facilisis porttitor et at augue. Donec condimentum pretium odio vel viverra. Aenean pulvinar massa arcu, at pulvinar quam gravida sed.</p>
+    </div>
+    <div class="info" id="memory">
+      <h3>memory</h3>
+      <div class="average none">
+        <p>Donec ullamcorper, velit eget consectetur consectetur, lacus dui ultricies velit, ut feugiat risus nunc dictum odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, tortor et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec lorem quam
+        </p>
+      </div>
+      <div class="clown">
+        <p id="f"><span class="first">Donec</span> ullamcorper, velit eget consectetur consectetur, lacus dui <span class="first">ultricies</span> velit, ut feugiat risus nunc dictum odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, <span class="first">tortor</span> et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec lorem quam
+        </p>
+        <p id="s" class="none">Donec ullamcorper, velit eget consectetur <span class="second">consectetur</span>, lacus dui ultricies velit, ut feugiat risus <span class="second">nunc dictum</span> odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, ornare malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. Cras sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, tortor et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit sagittis elit. Aenean nec <span class="second">lorem quam</span>
+        </p>
+        <p id="t" class="none">Donec ullamcorper, velit eget consectetur consectetur, lacus dui ultricies velit, ut feugiat risus nunc dictum odio. Morbi rutrum, nulla ac tempus facilisis, tortor nisi commodo risus, a varius lacus nibh id dui. Suspendisse vel libero ultricies, scelerisque velit at, egestas mi. Duis lorem urna, tincidunt eget dolor quis, <span class="third">ornare</span> malesuada justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sodales sodales turpis id finibus. <span class="third">Cras</span> sed turpis tempor, blandit orci a, varius nunc. Proin at tellus eget velit pretium consectetur. Phasellus mattis, tortor et commodo fermentum, odio ligula cursus mi, vestibulum pretium quam velit <span class="third">sagittis</span> elit. Aenean nec lorem quam
+        </p>
+      </div>
+    </div>
+    <div class="info" id="attention">
+      <h3>attention</h3>
+      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sit amet eros quis magna consectetur bibendum id pretium orci. Donec mollis nulla vitae malesuada vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam congue pulvinar consectetur. Suspendisse nec lectus non neque sagittis finibus eget ut ipsum. Nulla eget tristique justo, sed convallis nunc. Aliquam erat volutpat. In dui ligula, fermentum non eleifend a, tristique et mauris. Phasellus ligula nunc, dignissim vitae auctor eu, iaculis nec odio. Curabitur tristique lobortis iaculis.</p>
+    </div>
+
+
+    <script type="text/javascript">
+    var canvas, ctx, flag = false,
+        prevX = 0,
+        currX = 0,
+        prevY = 0,
+        currY = 0,
+        dot_flag = false;
+
+    var x = "blue",
+        y = 2;
+
+    function init() {
+        canvas = document.getElementById('can');
+        outer = document.getElementById('outer');
+
+        ctx = canvas.getContext("2d");
+        canvas.width = outer.offsetWidth;
+        canvas.height = outer.offsetHeight;
+        w = canvas.width;
+        h = canvas.height;
+
+        canvas.addEventListener("mousemove", function (e) {
+            findxy('move', e)
+        }, false);
+        canvas.addEventListener("mousedown", function (e) {
+            findxy('down', e)
+        }, false);
+        canvas.addEventListener("mouseup", function (e) {
+            findxy('up', e)
+        }, false);
+        canvas.addEventListener("mouseout", function (e) {
+            findxy('out', e)
+        }, false);
+    }
+
+    function draw() {
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(currX, currY);
+        ctx.strokeStyle = x;
+        ctx.lineWidth = y;
+        ctx.stroke();
+        ctx.closePath();
+    }
+
+    function findxy(res, e) {
+        if (res == 'down') {
+            prevX = currX;
+            prevY = currY;
+            currX = (e.clientX - canvas.getBoundingClientRect().left);
+            currY = (e.clientY - canvas.getBoundingClientRect().top);
+
+            flag = true;
+            dot_flag = true;
+            if (dot_flag) {
+                ctx.beginPath();
+                ctx.fillStyle = x;
+                ctx.fillRect(currX, currY, 2, 2);
+                ctx.closePath();
+                dot_flag = false;
+            }
+        }
+        if (res == 'up' || res == "out") {
+            flag = false;
+        }
+        if (res == 'move') {
+            if (flag) {
+                prevX = currX;
+                prevY = currY;
+                currX = (e.clientX - canvas.getBoundingClientRect().left);
+                currY = (e.clientY - canvas.getBoundingClientRect().top);
+                draw();
+            }
+        }
+    }
+    </script>
+
+  </body>
+</html>
