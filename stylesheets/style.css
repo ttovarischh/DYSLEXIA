@@ -166,6 +166,9 @@ a:hover {
 .leaftwo {
   transform-origin: 0 0;
 }
+h3 {
+  width: fit-content;
+}
 #reading, #writing, #coordination, #memory, #attention {
   margin-top: 160px;
 }
@@ -173,11 +176,10 @@ a:hover {
   /* background: blue; */
 }
 #reading h3 {
-  width: fit-content;
   background-color: #FF0000;
 }
 #writing h3 {
-  color: #0000FF;
+  background-color: #0000FF;
 }
 
 .writingon p {
@@ -191,13 +193,13 @@ a:hover {
 }
 
 #coordination h3 {
-  color: #7100FF;
+  background-color: #7100FF;
 }
 #memory h3 {
-  color: #00FF00;
+  background-color: #00FF00;
 }
 #attention h3 {
-  color: #24FFFF;
+  background-color: #24FFFF;
 }
 .reading_animate {
   animation: reading 4s ease infinite alternate;
