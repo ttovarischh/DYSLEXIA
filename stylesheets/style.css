@@ -172,16 +172,12 @@ h3 {
 #reading, #writing, #coordination, #memory, #attention {
   margin-top: 160px;
 }
-#reading {
-  /* background: blue; */
-}
 #reading h3 {
   background-color: #FF0000;
 }
 #writing h3 {
   background-color: #0000FF;
 }
-
 .writingon p {
   font-family: lcd;
   font-size: 63px;
@@ -191,7 +187,6 @@ h3 {
   font-size: 63px;
   color: blue;
 }
-
 #coordination h3 {
   background-color: #7100FF;
 }
@@ -222,7 +217,6 @@ h3 {
 }
 .text-wrapper {
   overflow:auto;
-  /* height: 100%; */
   position: relative;
 }
 .canvas-wrapper {
@@ -230,7 +224,6 @@ h3 {
   position: absolute;
   height: 534px;
   width: 100%;
-  /* background: blue; */
 }
 .wrapper {
   width: 100%;
@@ -239,10 +232,6 @@ h3 {
 }
 #can {
   z-index: 100;
-  /* border: 2px solid; */
-}
-.text-wrapper {
-  /* text-decoration: underline; */
 }
 #memory p {
   color: white;
@@ -267,12 +256,6 @@ h3 {
     opacity: 0;
   }
 }
-#s {
-  /* display: none; */
-}
-#t {
-  /* display: none; */
-}
 .average p {
   color: black !important;
 }
@@ -286,7 +269,6 @@ h3 {
   overflow: auto;
   width: 100%;
   height: 477px;
-  /* background: blue; */
   z-index: 0;
   margin-top: 63px;
 }
