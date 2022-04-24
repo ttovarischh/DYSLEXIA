@@ -173,7 +173,8 @@ a:hover {
   /* background: blue; */
 }
 #reading h3 {
-  color: #FF0000;
+  width: fit-content;
+  background-color: #FF0000;
 }
 #writing h3 {
   color: #0000FF;
