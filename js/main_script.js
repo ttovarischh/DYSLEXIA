@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   $( ".toggle" ).click(function() {
     $( "#no_mess" ).toggleClass("none");
+
     $( "#mess" ).toggleClass("none");
 
     $( ".buttons" ).toggleClass("off");
@@ -22,6 +23,12 @@ $( document ).ready(function() {
     $(".norm").toggleClass("none");
     $(".killme").toggleClass("none");
 
+  });
+
+  $( ".inside_pic" ).click(function() {
+    $(".inside_pic").toggleClass("zoom");
+    $(".inside_pic").toggleClass("unzoom");
+    $(".overflow").toggleClass("none");
   });
 
 

@@ -2,6 +2,49 @@ body {
   margin: 0;
   padding-bottom: 150px;
 }
+a {
+  transition: all 0.5s ease;
+  color: red;
+}
+a:hover {
+  transition: all 0.5s ease;
+  opacity: 0.5;
+}
+.inside_pic {
+  object-fit: contain;
+}
+.unzoom:hover {
+  transition: all 0.5s ease;
+  opacity: 0.5;
+}
+.unzoom {
+  transition: all 0.5s ease;
+  position: relative;
+  width: 41px;
+  height: 26px;
+  margin-right: 10px;
+  cursor: zoom-in;
+}
+.zoom {
+  transition: all 0.5s ease;
+  position: fixed;
+  left: calc(50% - 40vw);
+  top: calc(50vh - 40vh);
+  width: 80vw;
+  height: 80vh;
+  z-index: 300;
+  cursor: zoom-out;
+}
+.overflow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
 #distorted {
   width: 80vw;
   overflow: hidden;
