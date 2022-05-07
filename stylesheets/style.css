@@ -4,11 +4,17 @@ body {
 }
 a {
   transition: all 0.5s ease;
-  color: red;
 }
 a:hover {
   transition: all 0.5s ease;
   opacity: 0.5;
+}
+.descr {
+  color: black !important;
+  font-style: italic;
+}
+.inside_jpg {
+  object-fit: contain;
 }
 .inside_pic {
   object-fit: contain;
@@ -16,6 +22,14 @@ a:hover {
 .unzoom:hover {
   transition: all 0.5s ease;
   opacity: 0.5;
+}
+#unzoom {
+  transition: all 0.5s ease;
+  position: relative;
+  width: 41px;
+  height: 26px;
+  margin-right: 10px;
+  cursor: zoom-in;
 }
 .unzoom {
   transition: all 0.5s ease;
@@ -54,29 +68,45 @@ a:hover {
 }
 * {
   font-family: Arial;
-  font-style: normal;
   font-weight: normal;
 }
 .none {
   display: none;
 }
 .header {
-  justify-content: flex-end;
-  background: white;
   display: flex;
-  align-items: flex-end;
-  padding-right: 100px;
+  margin-left: 8.61vw;
+  margin-right: 7.29vw;
+  margin-top: 40px;
 }
-.dyslexia {
+/* .dyslexia {
   background: url("dyslexia.svg");
   width: 362px;
   height: 74px;
-}
+} */
 .header h1 {
-  font-size: 72px;
+  font-size: 104px;
   text-transform: uppercase;
   margin-bottom: 0;
   margin-top: 20px;
+}
+.ital {
+  margin-left: 30px;
+  font-style: italic;
+}
+.h_line {
+  width: 100%;
+  height: 8px;
+  background: black;
+}
+.duck {
+  position: relative;
+  margin-top: 36px;
+  margin-right: 0px;
+  margin-left: auto;
+  background: url('../images/duck.png');
+  width: 315px;
+  height: 176px;
 }
 .buttons h2:nth-of-type(2) {
   text-transform: uppercase;
@@ -93,22 +123,20 @@ a:hover {
   top: 105px;
   z-index: 100;
 }
-.white {
+/* .white {
   color: white;
 }
 .fixx {
   position: fixed;
   top: 0;
   right: 140px;
-}
+} */
 .buttons {
   position: relative;
   width: 171px;
   height: 64px;
   border-radius: 1000px;
   border: 1px solid #000000;
-  margin-left: auto;
-  margin-right: 127px;;
   display: flex;
   align-items: center;
   padding-left: 6px;
@@ -146,17 +174,20 @@ a:hover {
   transition: all 0.5s ease;
 }
 .info {
-  margin-left: 4.17vw;
-  margin-right: 8.40vw;
-  margin-top: 134px;
+  margin-left: 8.61vw;
+  margin-right: 7.29vw;
+  margin-top: 55px;
+}
+#main a {
+  color: black;
 }
 .info p {
   font-size: 36px;
   line-height: 41px;
 }
 .info h3 {
-  font-size: 36px;
-  line-height: 41px;
+  font-size: 50px;
+  line-height: 57px;
   text-transform: uppercase;
   margin-bottom: 44px;
 }
@@ -175,12 +206,26 @@ h3 {
 #reading h3 {
   background-color: #FF0000;
 }
+#reading a {
+  color: red;
+}
 #writing h3 {
   background-color: #0000FF;
+}
+#writing a {
+  color: #0000FF;
 }
 .writingon p {
   font-family: lcd;
   font-size: 63px;
+  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+}
+.writingon a {
+  font-family: lcd;
+  color: black !important;
+  font-size: 63px;
+  text-decoration: none;
 }
 .writingon span {
   font-family: lc;
@@ -192,6 +237,9 @@ h3 {
 }
 #memory h3 {
   background-color: #00FF00;
+}
+#memory a {
+  color: #00FF00;
 }
 #attention h3 {
   background-color: #24FFFF;
@@ -219,11 +267,15 @@ h3 {
   overflow:auto;
   position: relative;
 }
+.text-wrapper p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .canvas-wrapper {
   top: 0;
   position: absolute;
-  height: 534px;
   width: 100%;
+  height: 268px;
 }
 .wrapper {
   width: 100%;
@@ -268,9 +320,9 @@ h3 {
   top: 0;
   overflow: auto;
   width: 100%;
-  height: 477px;
+  height: 100%;
   z-index: 0;
-  margin-top: 63px;
+  margin-top: 5px;
 }
 .bold {
   position: absolute;
@@ -278,33 +330,111 @@ h3 {
   height: 1px;
   background: black;
 }
+.m_bold {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  border:none;
+  border-top:1px dashed black;
+}
 #one {
   top: 33px;
 }
+#m_one {
+  top: 17px;
+  opacity: 0.2;
+}
 #two {
-  top: 74px;
+  top: 73px;
+}
+#m_two {
+  top: 58px;
+  opacity: 0.2;
 }
 #three {
   top: 115px;
 }
+#m_three {
+  top: 99px;
+  opacity: 0.2;
+}
 #four {
   top: 156px;
+}
+#m_four {
+  top: 140px;
+  opacity: 0.2;
 }
 #five {
   top: 197px;
 }
+#m_five {
+  top: 180px;
+  opacity: 0.2;
+}
 #six {
   top: 238px;
 }
+#m_six {
+  top: 222px;
+  opacity: 0.2;
+}
 #seven {
-  top: 343px;
+  display: none;
+  top: 279px;
+}
+#m_seven {
+  display: none;
+  top: 17px;
+  opacity: 0.2;
 }
 #eight {
-  top: 383px;
+  display: none;
+  top: 320px;
+}
+#m_eight {
+  display: none;
+  top: 17px;
+  opacity: 0.2;
 }
 #nine {
-  top: 424px;
+  display: none;
+  top: 360px;
+}
+#m_nine {
+  display: none;
+  top: 17px;
+  opacity: 0.2;
 }
 #ten {
-  top: 466px;
+  display: none;
+  top: 402px;
+}
+#m_ten {
+  display: none;
+  top: 17px;
+  opacity: 0.2;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1709px) {
+  #seven {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1463px) {
+  #eight {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1276px) {
+  #nine {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1136px) {
+  #ten {
+    display: block;
+  }
 }

@@ -1,33 +1,56 @@
 $( document ).ready(function() {
-  $( ".toggle" ).click(function() {
+  $( ".reading.toggle" ).click(function() {
     $( "#no_mess" ).toggleClass("none");
-
     $( "#mess" ).toggleClass("none");
 
-    $( ".buttons" ).toggleClass("off");
-    $( ".buttons" ).toggleClass("on");
+    $( ".reading.buttons" ).toggleClass("off");
+    $( ".reading.buttons" ).toggleClass("on");
 
     $(this).toggleClass("active");
     $(this).toggleClass("inactive");
-
-    $("#writing").toggleClass("writingon");
-    $("#can").toggleClass("none");
-
-    $(".po").toggleClass("leafone");
-    $(".pt").toggleClass("leaftwo");
-
-    $(".average").toggleClass("none");
-    $(".clown").toggleClass("none");
-    $(".lines").toggleClass("none");
-
-    $(".norm").toggleClass("none");
-    $(".killme").toggleClass("none");
-
   });
 
+  $( ".writing.toggle" ).click(function() {
+    $(".text-wrapper").toggleClass("writingon");
+    $("#can").toggleClass("none");
+    $(".lines").toggleClass("none");
+
+    $( ".writing.buttons" ).toggleClass("off");
+    $( ".writing.buttons" ).toggleClass("on");
+
+    $(this).toggleClass("active");
+    $(this).toggleClass("inactive");
+  });
+
+  // $( ".toggle" ).click(function() {
+  //   $( "#no_mess" ).toggleClass("none");
+  //   $( "#mess" ).toggleClass("none");
+  //
+  //   $( ".buttons" ).toggleClass("off");
+  //   $( ".buttons" ).toggleClass("on");
+  //
+  //   $(this).toggleClass("active");
+  //   $(this).toggleClass("inactive");
+  //
+  //   $("#writing").toggleClass("writingon");
+  //   $("#can").toggleClass("none");
+  //
+  //   $(".po").toggleClass("leafone");
+  //   $(".pt").toggleClass("leaftwo");
+  //
+  //   $(".average").toggleClass("none");
+  //   $(".clown").toggleClass("none");
+  //   $(".lines").toggleClass("none");
+  //
+  //   $(".norm").toggleClass("none");
+  //   $(".killme").toggleClass("none");
+  //
+  // });
+
+
   $( ".inside_pic" ).click(function() {
-    $(".inside_pic").toggleClass("zoom");
-    $(".inside_pic").toggleClass("unzoom");
+    $(this).toggleClass("zoom");
+    $(this).toggleClass("unzoom");
     $(".overflow").toggleClass("none");
   });
 
