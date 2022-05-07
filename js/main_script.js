@@ -22,6 +22,17 @@ $( document ).ready(function() {
     $(this).toggleClass("inactive");
   });
 
+  $( ".coordination.toggle" ).click(function() {
+    $(".no_t").toggleClass("none");
+    $(".scene").toggleClass("none");
+
+    $( ".coordination.buttons" ).toggleClass("off");
+    $( ".coordination.buttons" ).toggleClass("on");
+
+    $(this).toggleClass("active");
+    $(this).toggleClass("inactive");
+  });
+
   // $( ".toggle" ).click(function() {
   //   $( "#no_mess" ).toggleClass("none");
   //   $( "#mess" ).toggleClass("none");
@@ -55,24 +66,24 @@ $( document ).ready(function() {
   });
 
 
-  $(document).mousemove(function (event) {
-  let leaff = $(".leafone, .leaftwo");
-  let x = (leaff.offset().left) + (leaff.width() / 2);
-  let y = (leaff.offset().top) + (leaff.height() / 2);
-  let rad = Math.atan2(event.pageX - x, event.pageY - y);
-  let rot = (rad * (45 / Math.PI) * -1) + 30;
-
-  if ($('#coordination').is(":hover")) {
-  leaff.css({
-    '-webkit-transform': 'rotate(' + rot + 'deg)',
-    '-moz-transform': 'rotate(' + rot + 'deg)',
-    '-ms-transform': 'rotate(' + rot + 'deg)',
-    'transform': 'rotate(' + rot + 'deg)'
-  });
-  } else {
-  $(".leafone, .leaftwo").css({'transform' : 'rotate('+ 0 +'deg)'});
-  }
-  });
+  // $(document).mousemove(function (event) {
+  // let leaff = $(".leafone, .leaftwo");
+  // let x = (leaff.offset().left) + (leaff.width() / 2);
+  // let y = (leaff.offset().top) + (leaff.height() / 2);
+  // let rad = Math.atan2(event.pageX - x, event.pageY - y);
+  // let rot = (rad * (45 / Math.PI) * -1) + 30;
+  //
+  // if ($('#coordination').is(":hover")) {
+  // leaff.css({
+  //   '-webkit-transform': 'rotate(' + rot + 'deg)',
+  //   '-moz-transform': 'rotate(' + rot + 'deg)',
+  //   '-ms-transform': 'rotate(' + rot + 'deg)',
+  //   'transform': 'rotate(' + rot + 'deg)'
+  // });
+  // } else {
+  // $(".leafone, .leaftwo").css({'transform' : 'rotate('+ 0 +'deg)'});
+  // }
+  // });
 
   setInterval(anima, 6000);
   setInterval(animatwo, 6000);

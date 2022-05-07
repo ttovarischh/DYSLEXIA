@@ -173,6 +173,14 @@ a:hover {
   left: calc(100% - 80px - 3%);
   transition: all 0.5s ease;
 }
+.scene {
+  background: url('../images/text.svg');
+  background-size: cover;
+  width: 68.63vw;
+  height: 316px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
 .info {
   margin-left: 8.61vw;
   margin-right: 7.29vw;
