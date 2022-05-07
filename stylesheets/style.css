@@ -243,11 +243,36 @@ h3 {
 #coordination h3 {
   background-color: #7100FF;
 }
+#coordination a {
+  color: #7100FF;
+}
 #memory h3 {
   background-color: #00FF00;
 }
 #memory a {
   color: #00FF00;
+}
+.fading {
+  font-family: Arial;
+  font-weight: normal;
+  color: black;
+  font-size: 36px;
+  line-height: 41px;
+  display: block;
+}
+.fading span {
+  animation: fading 15s infinite alternate;
+  opacity: 1;
+}
+@keyframes fading {
+  0% {
+      opacity: 1;
+      filter: blur(3px);
+  }
+  50%, 100% {
+      opacity: 0;
+      filter: blur(3px);
+  }
 }
 #attention h3 {
   background-color: #24FFFF;
@@ -319,10 +344,10 @@ h3 {
 .average p {
   color: black !important;
 }
-#attention p {
+/* #attention p {
   margin-bottom: 3px;
   margin-top: 0;
-}
+} */
 .lines {
   position: absolute;
   top: 0;

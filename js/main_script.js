@@ -33,6 +33,44 @@ $( document ).ready(function() {
     $(this).toggleClass("inactive");
   });
 
+  $(document).mousemove(function(event){
+    const halfHeight = $(this).height()/2;
+    const halfwidth = $(this).width()/2;
+    let offSetY = -(event.pageY - halfHeight) /4;
+    let offSetX = (event.pageX-halfwidth) / 3.8;
+    $('.scene').css({'transform' : 'rotateX(' + offSetY + 'deg) rotateY(' + offSetX + 'deg)'});
+  });
+
+  $( ".memory.toggle" ).click(function() {
+    $( ".average" ).toggleClass("none");
+    $( ".clown" ).toggleClass("none");
+
+    $( ".memory.buttons" ).toggleClass("off");
+    $( ".memory.buttons" ).toggleClass("on");
+
+    $(this).toggleClass("active");
+    $(this).toggleClass("inactive");
+
+    if($(".fading").is(":visible")){
+      let fadingHeading = document.querySelectorAll('.fading');
+
+      for (let a = 0; a < fadingHeading.length; a++){
+        let letters = fadingHeading[a].textContent.split(' ');
+
+        let content = letters.map((val, i) => {
+            let delay = Math.floor((Math.random() * 20000) + 1);
+            return ('<span style="animation-delay: '+ delay + 'ms">'+ val +'</span> ');
+        });
+
+        fadingHeading[a].innerHTML = "";
+
+        for (let i = 0; i < content.length; i++) {
+            fadingHeading[a].innerHTML += content[i];
+        }
+      }
+    }
+  });
+
   // $( ".toggle" ).click(function() {
   //   $( "#no_mess" ).toggleClass("none");
   //   $( "#mess" ).toggleClass("none");
