@@ -12,6 +12,7 @@ a:hover {
 .descr {
   color: black !important;
   font-style: italic;
+  font-size: 32px !important;
 }
 .inside_pic {
   object-fit: contain;
@@ -92,8 +93,6 @@ a:hover {
   height: 100%;
 }
 .big {
-  /* width: 80vw;
-  height: 80vh; */
   transform-origin: center center;
   transition: all 0.5s ease;
   transform: scale(70);
@@ -127,39 +126,48 @@ a:hover {
   display: none;
 }
 .header {
-  display: flex;
   margin-left: 8.61vw;
   margin-right: 7.29vw;
   margin-top: 40px;
 }
-/* .dyslexia {
-  background: url("dyslexia.svg");
-  width: 362px;
-  height: 74px;
-} */
+.h_name {
+  position: fixed;
+  top: 20px;
+  z-index: -1;
+  left: 7.4vw;
+  color: black;
+  transition: all 1s ease;
+}
+.inverted {
+  color: #FAFF00;
+  transition: all 1s ease;
+}
 .header h1 {
-  font-size: 104px;
+  font-size: 16.67vw;
   text-transform: uppercase;
   margin-bottom: 0;
   margin-top: 20px;
+  line-height: 19.17vw;
+}
+.header_tg {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20vw;
 }
 .ital {
-  margin-left: 30px;
+  margin-top: 0 !important;
+  font-size: 7.22vw !important;
   font-style: italic;
-}
-.h_line {
-  width: 100%;
-  height: 8px;
-  background: black;
+  line-height: 8.33vw !important;
+  /* display: inline-block; */
 }
 .duck {
   position: relative;
-  margin-top: 36px;
-  margin-right: 0px;
-  margin-left: auto;
   background: url('../images/duck.png');
-  width: 315px;
-  height: 176px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21.88vw;
+  height: 12.22vw;
 }
 .buttons h2:nth-of-type(2) {
   text-transform: uppercase;
@@ -176,14 +184,6 @@ a:hover {
   top: 105px;
   z-index: 100;
 }
-/* .white {
-  color: white;
-}
-.fixx {
-  position: fixed;
-  top: 0;
-  right: 140px;
-} */
 .buttons {
   position: relative;
   width: 171px;
@@ -242,9 +242,13 @@ a:hover {
 #main a {
   color: black;
 }
+#main p {
+  font-size: 32px;
+}
 .info p {
   font-size: 36px;
   line-height: 41px;
+  text-indent: 45px;
 }
 .info h3 {
   font-size: 50px;
@@ -258,11 +262,27 @@ a:hover {
 .leaftwo {
   transform-origin: 0 0;
 }
+.rect {
+  margin-top: 225px;
+  background: black;
+  width: 100%;
+  height: 591px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book {
+  background: url('../images/book.png');
+  width: 667px;
+  height: 472px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 h3 {
   width: fit-content;
 }
-#reading, #writing, #coordination, #memory, #attention {
-  margin-top: 160px;
+#reading, #writing, #coordination, #memory, #attention, #afterwords {
+  margin-top: 200px;
 }
 #reading h3 {
   background-color: #FF0000;
@@ -312,6 +332,7 @@ h3 {
   font-size: 36px;
   line-height: 41px;
   display: block;
+  text-indent: 45px;
 }
 .fading span {
   animation: fading 15s infinite alternate;
@@ -339,6 +360,10 @@ h3 {
   margin: 0;
   height: 41px;
   overflow: hidden;
+  text-indent: 0;
+}
+.innorm p:first-of-type {
+  text-indent: 45px;
 }
 .a {
   top: 0;
@@ -357,6 +382,15 @@ h3 {
 }
 .f {
   top: 205px;
+}
+.g {
+  top: 246px;
+}
+.h {
+  top: 287px;
+}
+.i {
+  top: 328px;
 }
 .reading_animate {
   animation: reading 4s ease infinite alternate;
