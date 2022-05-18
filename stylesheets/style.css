@@ -326,6 +326,7 @@ a:hover {
 .rect {
   margin-top: 70px;
   width: 100%;
+
 }
 .arrow {
   background: url("../images/arrow.svg");
@@ -407,10 +408,11 @@ a:hover {
 .book {
   background: url('../images/book1.png');
   background-color: blue;
-  width: 77vw;
-  height: 54.5vw;
+  width: 66vw;
+  height: 46.7vw;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-left: calc(50% - 33vw);
 }
 h3 {
   width: fit-content;
