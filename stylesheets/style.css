@@ -402,19 +402,28 @@ a:hover {
   transform: rotate(180deg);
 }
 .book {
+  position: relative;
   overflow: hidden;
   width: 66vw;
   height: 46.7vw;
   margin-left: calc(50% - 33vw);
 }
 .slides {
+  position: absolute;
+  left: 0;
   width: max-content;
   height: 100%;
+  display: flex;
+}
+#te {
+  background: green;
+}
+#tet {
+  background: blue;
 }
 .item {
   width: 66vw;
   height: 46.7vw;
-  display: inline-block;
 }
 .item img {
   object-fit: cover;
