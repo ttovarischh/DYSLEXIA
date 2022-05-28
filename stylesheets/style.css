@@ -156,11 +156,18 @@ a:hover {
   margin-top: 40px;
 }
 .h_name {
+  mix-blend-mode: multiply;
+  pointer-events: none;
   position: fixed;
   top: 20px;
-  z-index: -1;
   left: 7.4vw;
   color: black;
+  font-size: 16.67vw;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 20px;
+  line-height: 19.17vw;
+  z-index: 1;
 }
 .inverted {
   color: #FAFF00;
@@ -260,7 +267,11 @@ a:hover {
   left: calc(100% - 80px - 3%);
   transition: all 0.5s ease;
 }
+.h_name {
+  -webkit-transform: translateZ(-10px);
+}
 .scene {
+  z-index: 200;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
@@ -717,6 +728,13 @@ h3 {
 }
 
 /* responsive */
+
+@media only screen and (max-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+  h3 {
+    min-width: fit-content;
+  }
+}
+
 
 @media only screen and (max-width: 1709px) {
   #seven {
