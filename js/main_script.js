@@ -387,14 +387,22 @@ $( document ).ready(function() {
 //   }, 6000);
 // }
 
-  var className = "inverted";
+  var className = "visible";
   var scrollTrigger = 60;
+
+  // window.onscroll = function() {
+  //   if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+  //     document.getElementsByClassName("h_name")[0].classList.add(className);
+  //   } else {
+  //     document.getElementsByClassName("h_name")[0].classList.remove(className);
+  //   }
+  // };
 
   window.onscroll = function() {
     if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
-      document.getElementsByClassName("h_name")[0].classList.add(className);
+      document.getElementsByClassName("toadd")[0].classList.add(className);
     } else {
-      document.getElementsByClassName("h_name")[0].classList.remove(className);
+      document.getElementsByClassName("toadd")[0].classList.remove(className);
     }
   };
 

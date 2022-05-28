@@ -1,7 +1,6 @@
 	var slideCount = $('.item').length;
 	var slideWidth = $('.item').width();
 	var i = 1
-	var xMove = 200
 
 	$(".curr").html(i);
   $(".all").html(slideCount);
@@ -9,14 +8,14 @@
 	function moveLeft() {
 		$('.slides').animate({
 				left: '-='+slideWidth
-		}, 200, function () {
+		}, 500, function () {
 		});
 	};
 
 	function moveRight() {
 		$('.slides').animate({
 				left: '+='+slideWidth
-		}, 200, function () {
+		}, 500, function () {
 		});
 	};
 
@@ -25,7 +24,7 @@
 			i = 1
 			$('.slides').animate({
 					left: 0
-			}, 200, function () {
+			}, 500, function () {
 			});
 		} else {
 			i = i + 1;
@@ -39,7 +38,7 @@
 			i = slideCount
 			$('.slides').animate({
 					left: - (slideWidth * (slideCount - 1))
-			}, 200, function () {
+			}, 500, function () {
 			});
 		} else {
 			i = i - 1;
