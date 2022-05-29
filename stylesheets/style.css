@@ -401,7 +401,21 @@ a:hover {
   margin-top: 0;
   line-height: 41px;
 }
-.contacts a {
+p span:nth-child(even) {
+  color: #fff;
+  background: #000;
+}
+.worry p {
+  position: relative;
+  text-indent: 0;
+}
+.abs {
+  position: absolute;
+}
+.lol {
+  color: red !important;
+}
+.contacts a, #afterwords a {
   color: black;
 }
 .divider {
