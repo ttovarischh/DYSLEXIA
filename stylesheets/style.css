@@ -752,9 +752,9 @@ h3 {
 
 /* responsive */
 @media only screen and (max-device-width: 428px) and (max-device-height: 926px) {
-  h3 {
+  /* h3 {
     min-width: fit-content;
-  }
+  } */
   .zine h1 {
     font-size: 40px;
     line-height: 47px;
