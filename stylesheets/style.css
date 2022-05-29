@@ -758,17 +758,53 @@ h3 {
   .zine h1 {
     font-size: 40px;
     line-height: 47px;
+    margin: 0;
+  }
+  .fading {
+    font-size: 16px;
+    line-height: 18.4px;
+  }
+  .zine {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: 16.1px;
+    padding-bottom: 50px;
+  }
+  .contacts p {
+    font-size: 14px;
+    line-height: 16.1px;
+  }
+  .item {
+    width: 75vw;
+  }
+  .book {
+    width: 75vw;
+    margin-left: 0;
   }
   .info h3 {
     font-size: 40px;
+    margin-bottom: 30px;
   }
   .info p {
     font-size: 16px;
     line-height: 18.4px;
   }
+  .writingon span {
+    font-family: lc;
+    font-size: 40px;
+    color: blue;
+  }
+  .writingon a {
+    font-size: 40px;
+  }
+  .writingon p {
+    font-size: 40px;
+    line-height: 33.4px;
+  }
   .descr {
     font-size: 14px !important;
     line-height: 16.1px;
+    margin-top: 30px;
   }
   #main p {
     font-size: 14px !important;
@@ -779,6 +815,12 @@ h3 {
   }
   .ital {
     font-size: 32px !important;
+  }
+  .info {
+    margin-top: 30px;
+  }
+  #reading, #writing, #coordination, #memory, #attention, #afterwords {
+    margin-top: 60px;
   }
 }
 
