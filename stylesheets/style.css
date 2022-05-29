@@ -751,12 +751,40 @@ h3 {
 }
 
 /* responsive */
-@media only screen and (max-device-width: 428px) and (max-device-height: 926px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .zine h1 {
+    font-size: 86px;
+    line-height: 93px;
+    margin: 0;
+  }
+  .m_bold {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: black;
+    border-top: none;
+    opacity: 1 !important;
+  }
+  #m_one {
+    top: 443px;
+  }
+  #m_two {
+    top: 483px;
+    opacity: 0.2;
+  }
+  #m_three {
+    top: 526px;
+  }
+  #m_four, #m_five, #m_six {
+    display: none;
+  }
+}
+@media only screen and (max-device-width: 428px) and (max-device-height: 926px) and (-webkit-min-device-pixel-ratio: 1) {
   /* h3 {
     min-width: fit-content;
   } */
   .zine h1 {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 47px;
     margin: 0;
   }
@@ -821,6 +849,78 @@ h3 {
   }
   #reading, #writing, #coordination, #memory, #attention, #afterwords {
     margin-top: 60px;
+  }
+  #one {
+    top: 25px;
+  }
+  #two {
+    top: 58px;
+  }
+  #three {
+    top: 92px;
+  }
+  #four {
+    top: 125px;
+  }
+  #five {
+    top: 158px;
+  }
+  #six {
+    top: 192px;
+  }
+  #seven {
+    top: 226px;
+  }
+  #eight {
+    top: 258px;
+  }
+  #nine {
+    top: 291px;
+  }
+  #ten {
+    top: 326px;
+  }
+  .m_bold {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: black;
+    border-top: none;
+    opacity: 1 !important;
+  }
+  #m_one {
+    top: 359px;
+  }
+  #m_two {
+    top: 392px;
+  }
+  #m_three {
+    top: 425px;
+  }
+  #m_four {
+    top: 459px;
+  }
+  #m_five {
+    top: 491px;
+  }
+  #m_six {
+    top: 526px;
+  }
+  #m_seven {
+    display: block;
+    top: 559px;
+  }
+  #m_eight {
+    display: block;
+    top: 592px;
+  }
+  #m_nine {
+    display: block;
+    top: 626px;
+  }
+  #m_ten {
+    display: block;
+    top: 660px;
   }
 }
 
