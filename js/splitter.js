@@ -13,7 +13,19 @@ container.innerHTML = container.textContent.replace(/\S+/g, '<n>$&</n>');	   for
 container.innerHTML = tmp += closingtag;
 }
 
-splitLines(document.querySelectorAll('p')[11], '<span>','</span>');
+$(document).ready(function () {
+  splitLines(document.querySelectorAll('p')[11], '<span>','</span>');
+  var spanCount = $(".worry").find('span').length;
+  $(".al").html(spanCount);
+});
+
+$(window).resize(function() {
+  splitLines(document.querySelectorAll('p')[11], '<span>','</span>');
+  var spanCount = $(".worry").find('span').length;
+  $(".al").html(spanCount);
+});
+
+
 
 $( ".worry" ).click(function() {
   alert( "Handler for .click() called." );
@@ -21,7 +33,6 @@ $( ".worry" ).click(function() {
   if (spanCount == 7) {
     $(".worry").find('span').addClass("abs");
     $(".worry").css('height', '287px');
-
     $(".worry span:nth-child(1)").css('top', '0px');
     $(".worry span:nth-child(2)").css('top', '41px');
     $(".worry span:nth-child(3)").css('top', '82px');
@@ -30,15 +41,8 @@ $( ".worry" ).click(function() {
     $(".worry span:nth-child(6)").css('top', '205px');
     $(".worry span:nth-child(7)").css('top', '246px');
 
-
-
-
-
-
+  } else if (spanCount == 7) {
 
   }
   // $(".worry span:nth-child(2)").animate({top: '90px'});
 });
-
-var spanCount = $('.worry span').length;
-$(".al").html(slideCount);

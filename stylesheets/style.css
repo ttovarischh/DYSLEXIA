@@ -751,9 +751,28 @@ h3 {
 }
 
 /* responsive */
-@media only screen and (max-device-width: 428px) and (max-device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 428px) and (max-device-height: 926px) {
   h3 {
     min-width: fit-content;
+  }
+  .zine h1 {
+    font-size: 40px;
+    line-height: 47px;
+  }
+  .info h3 {
+    font-size: 40px;
+  }
+  .info p {
+    font-size: 16px;
+    line-height: 18.4px;
+  }
+  .descr {
+    font-size: 14px !important;
+    line-height: 16.1px;
+  }
+  #main p {
+    font-size: 14px !important;
+    line-height: 16.1px;
   }
 }
 
