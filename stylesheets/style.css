@@ -188,6 +188,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
   margin-right: -7.29vw;
+  margin-top: -44px;
+}
+.text_tg {
+  display: flex;
 }
 .ital {
   margin-top: 0 !important;
@@ -195,13 +199,14 @@ a:hover {
   font-style: italic;
   line-height: 8.33vw !important;
 }
-.ital span {
+.text_tg h3 {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
-  line-height: 57px;
+  line-height: 36px;
   text-transform: none !important;
+  margin-left: 13px;
 }
 .duck {
   position: relative;
