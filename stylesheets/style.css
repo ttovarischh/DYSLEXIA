@@ -188,7 +188,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   margin-right: -7.29vw;
-  margin-top: -44px;
+  margin-top: -3.5%;
 }
 .text_tg {
   display: flex;
@@ -198,15 +198,22 @@ a:hover {
   font-size: 7.22vw !important;
   font-style: italic;
   line-height: 8.33vw !important;
+  height: 6.7vw;
+}
+.z_c {
+  height: 6.7vw;
+  margin-left: 13px;
+  display: flex;
+  align-items: flex-end
 }
 .text_tg h3 {
   font-family: 'Arial';
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
-  line-height: 36px;
   text-transform: none !important;
-  margin-left: 13px;
+  margin: 0;
+  line-height: 55px;
 }
 .duck {
   position: relative;
@@ -831,8 +838,16 @@ h3 {
     font-size: 14px !important;
     line-height: 16.1px;
   }
-  .ital span {
+  .text_tg h3 {
     font-size: 16px;
+    line-height: 16px;
+  }
+  .z_c {
+    height: 7vw;
+    margin-left: 3px;
+  }
+  .duck {
+    width: 18.15vw;
   }
   .ital {
     font-size: 32px !important;
