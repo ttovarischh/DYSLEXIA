@@ -1,9 +1,9 @@
 "use strict";
 
 $(function(){
-  var getTextNodesIn = function(el) { // Look at all the page elements and returns the text nodes
+  var getTextNodesIn = function(el) {
       return $(el).find(":not(iframe,script)").addBack().contents().filter(function() {
-          return this.nodeType == 3; // Text node types are type 3
+          return this.nodeType == 3;
       });
   };
 

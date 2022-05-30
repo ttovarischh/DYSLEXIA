@@ -163,16 +163,12 @@ a:hover {
   margin-top: 40px;
 }
 .h_name {
-  /* mix-blend-mode: multiply;
-  pointer-events: none; */
-  /* position: fixed; */
   top: 20px;
   left: 7.4vw;
   color: black;
   font-size: 16.67vw;
   text-transform: uppercase;
   margin-bottom: 0;
-  /* margin-top: 20px; */
   line-height: 19.17vw;
   z-index: 1;
   display: block;
@@ -198,7 +194,6 @@ a:hover {
   font-size: 7.22vw !important;
   font-style: italic;
   line-height: 8.33vw !important;
-  /* display: inline-block; */
 }
 .ital span {
   font-family: 'Arial';
@@ -776,9 +771,6 @@ h3 {
   }
 }
 @media only screen and (max-device-width: 428px) and (max-device-height: 926px) and (-webkit-min-device-pixel-ratio: 1) {
-  /* h3 {
-    min-width: fit-content;
-  } */
   .zine h1 {
     font-size: 36px;
     line-height: 47px;
@@ -926,12 +918,6 @@ h3 {
   }
 }
 
-
-/* @media only screen and (max-width: 1919px) {
-  #seven {
-    display: block;
-  }
-} */
 @media only screen and (max-width: 1463px) {
   #eight {
     display: block;

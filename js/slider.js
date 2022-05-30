@@ -5,6 +5,16 @@
 	$(".curr").html(i);
   $(".all").html(slideCount);
 
+	$(window).resize(function() {
+		console.log("resized");
+		var slideWidth = $('.item').width();
+		pos = slideWidth * (i - 1);
+		console.log(pos);
+		$(".slides").css({
+			left : - pos
+		});
+	});
+
 	function moveLeft() {
 		$('.slides').animate({
 				left: '-='+slideWidth
