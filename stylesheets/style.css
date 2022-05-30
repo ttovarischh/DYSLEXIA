@@ -401,13 +401,12 @@ a:hover {
   margin-top: 0;
   line-height: 41px;
 }
-p span:nth-child(even) {
-  color: #fff;
-  background: #000;
-}
 .worry p {
   position: relative;
   text-indent: 0;
+}
+.worry span:nth-child(1) {
+    padding-left: 30px;
 }
 .abs {
   position: absolute;
@@ -536,6 +535,9 @@ h3 {
 }
 #attention h3 {
   background-color: #24FFFF;
+}
+#attention a {
+  color: #24FFFF;
 }
 .innorm {
   position: relative;
@@ -809,7 +811,7 @@ h3 {
   }
   .info p {
     font-size: 16px;
-    line-height: 18.4px;
+    line-height: 19px;
   }
   .writingon span {
     font-family: lc;

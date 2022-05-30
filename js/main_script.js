@@ -92,70 +92,72 @@ $( document ).ready(function() {
     }
   });
 
-  $( ".attention.toggle" ).click(function() {
-    $( ".attention.buttons" ).toggleClass("off");
-    $( ".attention.buttons" ).toggleClass("on");
-    $(this).toggleClass("active");
-    $(this).toggleClass("inactive");
+  // $( ".attention.toggle" ).click(function() {
+  //   $( ".attention.buttons" ).toggleClass("off");
+  //   $( ".attention.buttons" ).toggleClass("on");
+  //   $(this).toggleClass("active");
+  //   $(this).toggleClass("inactive");
+  //
+  //   $(".norm").toggleClass("none");
+  //   $(".innorm").toggleClass("none");
+  // });
 
-    $(".norm").toggleClass("none");
-    $(".innorm").toggleClass("none");
-  });
+  // let time = 0;
 
-  let time = 0;
+  // function hi() {
+  //     var at = setTimeout(function(){
+  //       $(".c").animate({top: '41px'});
+  //       $(".b").animate({top: '82px'});
+  //     }, 3000);
+  //     var bt = setTimeout(function(){
+  //       $(".c").animate({top: '0px'});
+  //       $(".b").animate({top: '41px'});
+  //       $(".a").animate({top: '82px'});
+  //     }, 6000);
+  //     var ct = setTimeout(function(){
+  //       $(".b").animate({top: '123px'});
+  //       $(".d").animate({top: '41px'});
+  //     }, 9000);
+  //     var dt = setTimeout(function(){
+  //       $(".f").animate({top: '164px'});
+  //       $(".e").animate({top: '205px'});
+  //     }, 12000);
+  //     var et = setTimeout(function(){
+  //       $(".a").animate({top: '0px'});
+  //       $(".c").animate({top: '82px'});
+  //     }, 15000);
+  //     var ft = setTimeout(function(){
+  //       $(".d").animate({top: '123px'});
+  //       $(".b").animate({top: '41px'});
+  //     }, 18000);
+  //
+  //     var gt = setTimeout(function(){
+  //       $(".g").animate({top: '205px'});
+  //       $(".e").animate({top: '246px'});
+  //     }, 21000);
+  //     var gt = setTimeout(function(){
+  //       $(".g").animate({top: '287px'});
+  //       $(".e").animate({top: '164px'});
+  //       $(".f").animate({top: '205px'});
+  //       $(".h").animate({top: '246px'});
+  //     }, 24000);
+  //     var gt = setTimeout(function(){
+  //       $(".h").animate({top: '287px'});
+  //       $(".g").animate({top: '246px'});
+  //     }, 27000);
+  //
+  //     time = time + 1
+  // }
+  //
+  // hi();
 
-  function hi() {
-      var at = setTimeout(function(){
-        $(".c").animate({top: '41px'});
-        $(".b").animate({top: '82px'});
-      }, 3000);
-      var bt = setTimeout(function(){
-        $(".c").animate({top: '0px'});
-        $(".b").animate({top: '41px'});
-        $(".a").animate({top: '82px'});
-      }, 6000);
-      var ct = setTimeout(function(){
-        $(".b").animate({top: '123px'});
-        $(".d").animate({top: '41px'});
-      }, 9000);
-      var dt = setTimeout(function(){
-        $(".f").animate({top: '164px'});
-        $(".e").animate({top: '205px'});
-      }, 12000);
-      var et = setTimeout(function(){
-        $(".a").animate({top: '0px'});
-        $(".c").animate({top: '82px'});
-      }, 15000);
-      var ft = setTimeout(function(){
-        $(".d").animate({top: '123px'});
-        $(".b").animate({top: '41px'});
-      }, 18000);
+  // var interval = setInterval(function(){
+  //   if (time > 0) {
+  //     hi();
+  //   }
+  // }, 30000);
 
-      var gt = setTimeout(function(){
-        $(".g").animate({top: '205px'});
-        $(".e").animate({top: '246px'});
-      }, 21000);
-      var gt = setTimeout(function(){
-        $(".g").animate({top: '287px'});
-        $(".e").animate({top: '164px'});
-        $(".f").animate({top: '205px'});
-        $(".h").animate({top: '246px'});
-      }, 24000);
-      var gt = setTimeout(function(){
-        $(".h").animate({top: '287px'});
-        $(".g").animate({top: '246px'});
-      }, 27000);
-
-      time = time + 1
-  }
-
-  hi();
-
-  var interval = setInterval(function(){
-    if (time > 0) {
-      hi();
-    }
-  }, 30000);
+// WARNING: vishe!!!
 
   // $('body').click(function() {
   //   if ($('.innorm').is(':visible')) {
