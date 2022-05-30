@@ -645,10 +645,7 @@ h3 {
 .average p {
   color: black !important;
 }
-/* #attention p {
-  margin-bottom: 3px;
-  margin-top: 0;
-} */
+
 .lines {
   position: absolute;
   top: 0;
@@ -714,12 +711,10 @@ h3 {
   opacity: 0.2;
 }
 #seven {
-  display: none;
   top: 279px;
 }
 #m_seven {
-  display: none;
-  top: 17px;
+  top: 262px;
   opacity: 0.2;
 }
 #eight {
@@ -727,8 +722,7 @@ h3 {
   top: 320px;
 }
 #m_eight {
-  display: none;
-  top: 17px;
+  top: 303px;
   opacity: 0.2;
 }
 #nine {
@@ -875,7 +869,7 @@ h3 {
     top: 258px;
   }
   #nine {
-    top: 291px;
+    top: 293px !important;
   }
   #ten {
     top: 326px;
@@ -916,7 +910,7 @@ h3 {
   }
   #m_nine {
     display: block;
-    top: 626px;
+    top: 626px !important;
   }
   #m_ten {
     display: block;
@@ -931,14 +925,23 @@ h3 {
 }
 
 
-@media only screen and (max-width: 1709px) {
+/* @media only screen and (max-width: 1919px) {
   #seven {
     display: block;
   }
-}
+} */
 @media only screen and (max-width: 1463px) {
   #eight {
     display: block;
+  }
+  #nine {
+    display: block;
+    top: 360px;
+  }
+  #m_nine {
+    display: block;
+    top: 345px;
+    opacity: 0.2;
   }
 }
 @media only screen and (max-width: 1276px) {
