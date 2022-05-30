@@ -127,6 +127,7 @@ $(document).ready(function () {
         console.log('14');
         $(".worry").find('span').addClass("abs");
         $(".worry").css('height', '266px');
+        $(".worry span:nth-child(1)").css('letter-spacing', '-0.6px');
         $(".worry span:nth-child(1)").css('top', '0px');
         $(".worry span:nth-child(2)").css('top', '19px');
         $(".worry span:nth-child(3)").css('top', '38px');
