@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     splitLines(document.querySelectorAll('p')[11], '<span>','</span>');
     var spanCount = $(".worry").find('span').length;
-    $(".al").html(spanCount);
+    // $(".al").html(spanCount);
 
       if (spanCount == 15) {
         console.log('15');
@@ -809,7 +809,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function() {
-  splitLines(document.querySelectorAll('p')[11], '<span>','</span>');
-  var spanCount = $(".worry").find('span').length;
-  $(".al").html(spanCount);
+  if ($(".attention.buttons").hasClass("on")) {
+    location.reload();
+  }
 });
